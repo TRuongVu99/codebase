@@ -3,10 +3,11 @@ module.exports = {
     'jest/globals': true,
   },
   root: true,
-  extends: ['@react-native-community'],
+  extends: ['@react-native-community', 'prettier'],
   parser: '@typescript-eslint/parser',
-  plugins: ['jest', '@typescript-eslint'],
+  plugins: ['jest', '@typescript-eslint', 'prettier'],
   rules: {
+    semi: ['error', 'never'],
     'object-curly-spacing': ['error', 'always'],
     'array-bracket-spacing': ['error', 'never'],
     'react/require-default-props': ['error'],
@@ -19,10 +20,11 @@ module.exports = {
     'react-native/no-inline-styles': 0,
     'react-hooks/exhaustive-deps': 'off',
     'no-undef': 'off',
+    'prettier/prettier': 0,
   },
   settings: {
     'import/resolver': {
       'babel-module': {},
     },
   },
-};
+}
