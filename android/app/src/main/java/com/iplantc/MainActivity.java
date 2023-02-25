@@ -1,4 +1,4 @@
-package com.plantcare;
+package com.iplantc;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

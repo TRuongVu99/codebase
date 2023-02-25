@@ -1,4 +1,4 @@
-package com.plantcare;
+package com.iplantc;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

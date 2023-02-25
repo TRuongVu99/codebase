@@ -93,9 +93,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.plantcare"
+    namespace "com.iplantc"
     defaultConfig {
-        applicationId "com.plantcare"
+        applicationId "com.iplantc"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
