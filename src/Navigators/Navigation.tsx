@@ -7,7 +7,7 @@ import CodePush from 'react-native-code-push'
 // List Animated Wrapper
 import { transition, _transitionApp } from '@/Components/TransitionContainer'
 import { Layout } from '@/Theme'
-import { Transitioning } from 'react-native-reanimated'
+import { TransitioningView } from 'react-native-reanimated'
 // Keyboard
 import KeyboardManager from 'react-native-keyboard-manager'
 // Navigation
@@ -16,7 +16,6 @@ import BottomTab from './BottomTab'
 import { navigationRef } from './utils'
 // RTK
 import { useAppDispatch, useAppSelector } from '@/Common/Hooks/useRTK'
-import { appActions } from '@/Store/Slices'
 import { RXStore } from '@/Store/utils'
 // Theme
 import { useAppInit, useTheme } from '@/Common/Hooks'
@@ -24,10 +23,10 @@ import { useAppInit, useTheme } from '@/Common/Hooks'
 import { appLoaderHolder } from '@/Common/AppLoaderHolder'
 import { isIos } from '@/Common/Device'
 import { messageDialogHolder } from '@/Common/MessageHolder'
+import AppMode from '@/Components/AppMode'
 import { AppLoader } from '@/Components/Loader'
 import { MessageDialog } from '@/Components/MessageDialog'
 import ToastMessage from '@/Components/ToastMessage'
-import AppMode from '@/Components/AppMode'
 
 const ApplicationNavigator = () => {
   const dispatch = useAppDispatch()
@@ -60,7 +59,7 @@ const ApplicationNavigator = () => {
   return (
     <GestureHandlerRootView style={styles.rootView}>
       <BottomSheetModalProvider>
-        <Transitioning.View
+        <TransitioningView
           style={[Layout.fill]}
           transition={transition}
           ref={_transitionApp}
@@ -76,7 +75,7 @@ const ApplicationNavigator = () => {
               <AppMode envMode={env.APP_ENV} />
             )}
           </NavigationContainer>
-        </Transitioning.View>
+        </TransitioningView>
       </BottomSheetModalProvider>
     </GestureHandlerRootView>
   )

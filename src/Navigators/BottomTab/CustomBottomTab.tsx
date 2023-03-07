@@ -1,6 +1,6 @@
 import React from 'react'
 import { BottomTabBar, BottomTabBarProps } from '@react-navigation/bottom-tabs'
-import { BlurView } from '@react-native-community/blur'
+import { BlurView } from 'expo-blur'
 
 import { useAppSelector } from '@/Common/Hooks/useRTK'
 import { isIos } from '@/Common/Device'
@@ -15,10 +15,8 @@ const CustomTabBar = (props: BottomTabBarProps) => {
         left: 0,
         right: 0,
       }}
-      blurType={darkMode ? 'extraDark' : 'xlight'}
-      blurAmount={10}
-      // blurRadius={25}
-      // overlayColor="transparent"
+      intensity={50}
+      tint={darkMode ? 'dark' : 'light'}
     >
       <BottomTabBar {...props} />
     </BlurView>
