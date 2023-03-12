@@ -1,4 +1,4 @@
-import { AppLoaderRef } from '@/Components/Loader/type'
+import { AppLoaderRef } from '@/Components/Loader/Type'
 import { createRef } from 'react'
 
 export const appLoaderHolder = createRef<AppLoaderRef>()

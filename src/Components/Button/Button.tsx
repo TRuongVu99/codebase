@@ -5,7 +5,7 @@ import { useTheme } from '@/Common/Hooks'
 import { sizeScale } from '@/Common/Scale'
 import { Colors } from '@/Theme/Variables'
 import { BoldText, MediumText, RegularText } from '../Text'
-import { ButtonProps } from './type'
+import { ButtonProps } from './Type'
 
 export const Button = (props: ButtonProps) => {
   const {

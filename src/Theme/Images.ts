@@ -1,4 +1,5 @@
+export type ImageLocalType = 'defaultImage'
+
 export default {
-  logo: require('@/Assets/Images/TOM.png'),
-  // default: require('@/Assets/Images/Default.png'),
+  defaultImage: require('@/Assets/Images/defaultImage.png'),
 }

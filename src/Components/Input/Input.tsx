@@ -5,7 +5,7 @@ import { useController } from 'react-hook-form'
 import { MediumText } from '../Text'
 // Icon
 import Icon from 'react-native-vector-icons/MaterialIcons'
-import { InputProps } from './type'
+import { InputProps } from './Type'
 // Theme
 import { Layout } from '@/Theme'
 import { Colors } from '@/Theme/Variables'

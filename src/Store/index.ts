@@ -1,4 +1,3 @@
-import AsyncStorage from '@react-native-async-storage/async-storage'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import {
   persistReducer,
@@ -9,8 +8,27 @@ import {
   PERSIST,
   PURGE,
   REGISTER,
+  Storage,
 } from 'redux-persist'
 import { appReducer, authReducer, themeReducer } from './Slices'
+import { MMKV } from 'react-native-mmkv'
+
+const storage = new MMKV()
+
+export const reduxStorage: Storage = {
+  setItem: (key, value) => {
+    storage.set(key, value)
+    return Promise.resolve(true)
+  },
+  getItem: key => {
+    const value = storage.getString(key)
+    return Promise.resolve(value)
+  },
+  removeItem: key => {
+    storage.delete(key)
+    return Promise.resolve()
+  },
+}
 
 const reducers = combineReducers({
   theme: themeReducer,
@@ -18,9 +36,9 @@ const reducers = combineReducers({
   auth: authReducer,
 })
 
-const persistConfig = {
+const persistConfig: any = {
   key: 'root',
-  storage: AsyncStorage,
+  storage: reduxStorage,
   whitelist: ['theme'],
 }
 

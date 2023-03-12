@@ -1,66 +1,39 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import type { PropsWithChildren } from 'react'
+import 'react-native-gesture-handler'
+import '@/Translations/i18n'
 import React from 'react'
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  useColorScheme,
-} from 'react-native'
+import { UIManager } from 'react-native'
+import ErrorBoundary from 'react-native-error-boundary'
+import { Provider } from 'react-redux'
+import { PersistGate } from 'redux-persist/lib/integration/react'
+import { AvoidSoftInput } from 'react-native-avoid-softinput'
+import { store, persistor } from '@/Store'
+import ApplicationNavigator from '@/Navigators/Navigation'
+import { isIos } from '@/Common/Device'
+import CustomFallback from '@/Components/CustomFallback'
 
-import { Colors, Header } from 'react-native/Libraries/NewAppScreen'
-
-type SectionProps = PropsWithChildren<{
-  title: string
-}>
-
-function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark'
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+if (!isIos) {
+  if (UIManager.setLayoutAnimationEnabledExperimental) {
+    UIManager.setLayoutAnimationEnabledExperimental(true)
   }
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}
-      >
-        <Header />
-      </ScrollView>
-    </SafeAreaView>
-  )
+} else {
+  AvoidSoftInput.setEnabled(true)
 }
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-})
+const App = () => (
+  <Provider store={store}>
+    {/**
+     * PersistGate delays the rendering of the app's UI until the persisted state has been retrieved
+     * and saved to redux.
+     * The `loading` prop can be `null` or any react instance to show during loading (e.g. a splash screen),
+     * for example `loading={<SplashScreen />}`.
+     * @see https://github.com/rt2zz/redux-persist/blob/master/docs/PersistGate.md
+     */}
+    <PersistGate loading={null} persistor={persistor}>
+      <ErrorBoundary FallbackComponent={CustomFallback}>
+        <ApplicationNavigator />
+      </ErrorBoundary>
+    </PersistGate>
+  </Provider>
+)
 
 export default App

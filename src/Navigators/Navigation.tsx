@@ -4,19 +4,15 @@ import { StatusBar, StyleSheet } from 'react-native'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 // Code Push
 import CodePush from 'react-native-code-push'
-// List Animated Wrapper
-import { transition, _transitionApp } from '@/Components/TransitionContainer'
-import { Layout } from '@/Theme'
-import { TransitioningView } from 'react-native-reanimated'
 // Keyboard
 import KeyboardManager from 'react-native-keyboard-manager'
 // Navigation
 import { NavigationContainer } from '@react-navigation/native'
 import BottomTab from './BottomTab'
-import { navigationRef } from './utils'
+import { navigationRef } from '@/Navigators/Utils'
 // RTK
 import { useAppDispatch, useAppSelector } from '@/Common/Hooks/useRTK'
-import { RXStore } from '@/Store/utils'
+import { RXStore } from '@/Store/Utils'
 // Theme
 import { useAppInit, useTheme } from '@/Common/Hooks'
 // Components
@@ -40,7 +36,6 @@ const ApplicationNavigator = () => {
         deploymentKey: isIos
           ? env.CODE_PUSH_KEY_IOS
           : env.CODE_PUSH_KEY_ANDROID,
-        updateDialog: {},
         installMode: CodePush.InstallMode.IMMEDIATE,
       })
     }
@@ -59,23 +54,17 @@ const ApplicationNavigator = () => {
   return (
     <GestureHandlerRootView style={styles.rootView}>
       <BottomSheetModalProvider>
-        <TransitioningView
-          style={[Layout.fill]}
-          transition={transition}
-          ref={_transitionApp}
-        >
-          <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
-            <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
-            <BottomTab />
-            <ToastMessage />
-            <AppLoader ref={appLoaderHolder} />
-            <MessageDialog ref={messageDialogHolder} />
-            <RXStore />
-            {appLoadingComplete && env.APP_ENV !== 'Prod' && (
-              <AppMode envMode={env.APP_ENV} />
-            )}
-          </NavigationContainer>
-        </TransitioningView>
+        <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
+          <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
+          <BottomTab />
+          <ToastMessage />
+          <AppLoader ref={appLoaderHolder} />
+          <MessageDialog ref={messageDialogHolder} />
+          <RXStore />
+          {appLoadingComplete && env.APP_ENV !== 'Prod' && (
+            <AppMode envMode={env.APP_ENV} />
+          )}
+        </NavigationContainer>
       </BottomSheetModalProvider>
     </GestureHandlerRootView>
   )

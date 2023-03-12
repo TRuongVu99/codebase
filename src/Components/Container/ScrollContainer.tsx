@@ -2,7 +2,7 @@ import { ScrollView, View } from 'react-native'
 import React, { memo } from 'react'
 import equals from 'react-fast-compare'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { ScrollContainerProps } from './type'
+import { ScrollContainerProps } from './Type'
 import { Layout } from '@/Theme'
 import { useTheme } from '@/Common/Hooks'
 

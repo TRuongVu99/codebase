@@ -1,27 +1,16 @@
 import Config from 'react-native-config'
 
-export enum ENVName {
-  Dev = 'Dev',
-  Staging = 'Staging',
-  Prod = 'Prod',
-}
+export type EnvKeyName = 'Dev' | 'Staging' | 'Prod'
 export interface ENVFields {
   API_URL: string
-  APP_ENV: string
+  APP_ENV: EnvKeyName
   CODE_PUSH_KEY_ANDROID: string
   CODE_PUSH_KEY_IOS: string
 }
 
-export interface ENVFields {
-  API_URL: string
-  APP_ENV: string
-  CODE_PUSH_KEY_ANDROID: string
-  CODE_PUSH_KEY_IOS: string
-}
+export const initEnv = Config.APP_ENV as EnvKeyName
 
-export const initEnv = Config.APP_ENV as ENVName
-
-const EnvConfig = {
+const EnvConfig: Record<EnvKeyName, ENVFields> = {
   Dev: {
     APP_ENV: 'Dev',
     API_URL: 'https://jsonplaceholder.typicode.com/',
@@ -42,8 +31,8 @@ const EnvConfig = {
   },
 }
 
-export const ENVDynamic = (env: ENVName) => {
+export const ENVDynamic = (env: EnvKeyName): ENVFields => {
   return EnvConfig[env]
 }
 
-export default EnvConfig[initEnv]
+export default EnvConfig[initEnv || 'Dev']

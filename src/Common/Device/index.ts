@@ -3,11 +3,6 @@ import { kHeight, kWidth } from 'Common/Constants'
 import ReactNativeHapticFeedback, {
   HapticFeedbackTypes,
 } from 'react-native-haptic-feedback'
-import {
-  accelerometer,
-  setUpdateIntervalForType,
-  SensorTypes,
-} from 'react-native-sensors'
 import EncryptedStorage from 'react-native-encrypted-storage'
 import { v4 as uuidv4 } from 'uuid'
 
@@ -69,22 +64,6 @@ const options = {
 
 export const haptics = (type?: HapticFeedbackTypes): void => {
   ReactNativeHapticFeedback.trigger(type || 'impactLight', options)
-}
-
-export const addSensorListener = (onShake: Function) => {
-  const THRESHOLD = 1.8
-  let lastUpdate = 0
-  setUpdateIntervalForType(SensorTypes.accelerometer, 200)
-  accelerometer.subscribe(({ x, y, z }) => {
-    const acceleration = Math.sqrt(x * x + y * y + z * z)
-    let currTime = Date.now()
-    if (currTime - lastUpdate > 2000) {
-      if (acceleration >= THRESHOLD) {
-        lastUpdate = currTime
-        onShake()
-      }
-    }
-  })
 }
 
 export const hasNotch = (): boolean => {

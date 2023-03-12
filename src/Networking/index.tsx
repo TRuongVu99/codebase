@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 import { authActions } from '@/Store/Slices'
-import { dispatch, getState } from '@/Store/utils'
+import { dispatch, getState } from '@/Store/Utils'
 import Axios, {
   AxiosError,
   AxiosRequestConfig,

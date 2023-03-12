@@ -6,7 +6,7 @@ import { RegularText } from '../Text'
 // Icon
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import Octicons from 'react-native-vector-icons/Octicons'
-import { InputProps } from './type'
+import { InputProps } from './Type'
 // Theme
 import { Layout } from '@/Theme'
 import { Colors } from '@/Theme/Variables'

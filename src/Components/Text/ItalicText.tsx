@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text } from 'react-native'
-import { CustomTextProps } from './type'
+import { CustomTextProps } from './Type'
 import { sizeScale } from '@/Common/Scale'
 import { kFontFamily } from '@/Common/Constants'
 

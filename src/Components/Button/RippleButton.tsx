@@ -6,7 +6,7 @@ import { StyleSheet, View } from 'react-native'
 import InkWell from 'react-native-inkwell'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import { BoldText, MediumText, RegularText } from '../Text'
-import { ButtonProps } from './type'
+import { ButtonProps } from './Type'
 
 export const RippleButton = (props: ButtonProps) => {
   const {

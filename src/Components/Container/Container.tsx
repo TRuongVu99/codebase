@@ -2,7 +2,7 @@ import { View } from 'react-native'
 import React, { memo } from 'react'
 import equals from 'react-fast-compare'
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
-import { ContainerProps } from './type'
+import { ContainerProps } from './Type'
 import { Layout } from '@/Theme'
 import { useTheme } from '@/Common/Hooks'
 

@@ -14,7 +14,7 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated'
 import Icon from 'react-native-vector-icons/MaterialIcons'
-import { CheckBoxProps, CheckBoxRef } from './type'
+import { CheckBoxProps, CheckBoxRef } from './Type'
 
 const AnimatedIcon = Animated.createAnimatedComponent(Icon)
 

@@ -6,7 +6,7 @@ import { useTheme } from '@/Common/Hooks'
 import { Button, GradientButton } from '@/Components/Button'
 import { RippleButton } from '@/Components/Button/RippleButton'
 import CheckBox from '@/Components/CheckBox'
-import { CheckBoxRef } from '@/Components/CheckBox/type'
+import { CheckBoxRef } from '@/Components/CheckBox/Type'
 import { ScrollContainer } from '@/Components/Container'
 import { Input, PasswordInput } from '@/Components/Input'
 import { TabView } from '@/Components/TabView'
@@ -14,6 +14,8 @@ import { MediumText } from '@/Components/Text'
 import { initEnv } from '@/Config/Env'
 import { themeActions, ThemeState } from '@/Store/Slices'
 import { translate } from '@/Translations'
+import { CustomImage } from '@/Components/Image'
+import { kWidth } from '@/Common/Constants'
 
 const TABVIEW = [
   {
@@ -55,6 +57,11 @@ const ExampleContainer = () => {
   return (
     <ScrollContainer style={[Layout.fill]}>
       <MediumText>Env Code Push: {initEnv}</MediumText>
+      <CustomImage
+        containerStyle={{ width: 100, height: 100, borderRadius: 20 }}
+        style={{ borderRadius: 20 }}
+        source=""
+      />
       <TabView
         data={TABVIEW}
         onIndexChange={onIndexChange}

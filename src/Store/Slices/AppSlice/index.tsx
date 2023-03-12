@@ -4,8 +4,8 @@ import {
   getValueFromStorage,
   saveToStorage,
 } from '@/Common/Storage'
-import ENVConfig, { ENVDynamic, ENVName } from '@/Config/Env'
-import { AppState } from '@/Models/App'
+import ENVConfig, { ENVDynamic, ENVFields, EnvKeyName } from '@/Config/Env'
+import { AppState } from './Type'
 
 const initialAppState: AppState = {
   internetState: true,
@@ -26,7 +26,7 @@ export const appInit = createAsyncThunk(
       const envConfig = getValueFromStorage(
         storageMethod.String,
         'envConfig',
-      ) as ENVName
+      ) as EnvKeyName
       return { showIntroduce, envConfig }
     } catch (error) {
       console.log(error)
@@ -51,7 +51,7 @@ const appSlice = createSlice({
     builder.addCase(appInit.fulfilled, (state, action) => {
       const { payload } = action
       if (payload?.envConfig) {
-        state.env = ENVDynamic(payload?.envConfig)
+        state.env = ENVDynamic(payload?.envConfig as EnvKeyName)
       } else {
         state.env = ENVConfig
       }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { StyleSheet } from 'react-native'
 import { FlashList } from '@shopify/flash-list'
-import { LoadMoreListProps } from './type'
+import { LoadMoreListProps } from './Type'
 import FooterLoader from '../Loader/FooterLoader'
 
 const LoadMoreFlashList = (props: LoadMoreListProps<any>) => {

@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import equals from 'react-fast-compare'
-import { TabViewProps } from './type'
+import { TabViewProps } from './Type'
 import Animated, {
   useAnimatedStyle,
   useSharedValue,

@@ -10,8 +10,7 @@ import React, {
 } from 'react'
 import equals from 'react-fast-compare'
 import { StyleSheet, View } from 'react-native'
-import { WaveIndicator } from 'react-native-indicators'
-import { AppLoaderRef } from './type'
+import { AppLoaderRef } from './Type'
 
 const AppLoaderComponent = forwardRef((props, ref: Ref<AppLoaderRef>) => {
   useImperativeHandle(
@@ -40,7 +39,7 @@ const AppLoaderComponent = forwardRef((props, ref: Ref<AppLoaderRef>) => {
           ]}
         >
           <View style={[Layout.boxShadow, styles.wrapper]}>
-            <WaveIndicator size={sizeScale(30)} color={Colors.primary} />
+            {/* <WaveIndicator size={sizeScale(30)} color={Colors.primary} /> */}
           </View>
         </View>
       )}
