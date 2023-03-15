@@ -1,5 +1,6 @@
 import 'react-native-gesture-handler'
 import '@/Translations/i18n'
+import 'react-native-get-random-values'
 import React from 'react'
 import { UIManager } from 'react-native'
 import ErrorBoundary from 'react-native-error-boundary'

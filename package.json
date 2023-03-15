@@ -48,6 +48,7 @@
     "react-native-flipper": "^0.183.0",
     "react-native-floating-label-input": "^1.4.2",
     "react-native-gesture-handler": "^2.9.0",
+    "react-native-get-random-values": "^1.8.0",
     "react-native-haptic-feedback": "^1.14.0",
     "react-native-inkwell": "^0.4.5",
     "react-native-keyboard-manager": "^6.5.4-6",
@@ -95,7 +96,7 @@
   },
   "resolutions": {
     "react-native-gesture-handler": "2.9.0",
-    "react-native-reanimated": "3.0.1"
+    "react-native-reanimated": "3.0.2"
   },
   "jest": {
     "preset": "react-native"
