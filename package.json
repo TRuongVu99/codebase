@@ -37,7 +37,7 @@
     "react-fast-compare": "^3.2.0",
     "react-hook-form": "^7.43.2",
     "react-i18next": "^12.2.0",
-    "react-native": "0.71.3",
+    "react-native": "0.71.4",
     "react-native-avoid-softinput": "^3.1.4",
     "react-native-bootsplash": "^4.5.2",
     "react-native-code-push": "^7.1.0",
