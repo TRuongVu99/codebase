@@ -8,7 +8,7 @@ import Axios, {
   Method,
 } from 'axios'
 import { TIME_OUT } from './ApiCode'
-import { ParamsNetwork, ResponseBase } from './type'
+import { ParamsNetwork, ResponseBase } from './Type'
 
 const TOKEN_HEADER = 'authorization'
 

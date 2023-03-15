@@ -2,7 +2,7 @@ import React from 'react'
 import { Image } from 'expo-image'
 import { View } from 'react-native'
 import Images from '@/Theme/Images'
-import { styles } from './Styles'
+import { styles } from './Style'
 import { CustomImageProps } from './Type'
 
 export const CustomImage = ({

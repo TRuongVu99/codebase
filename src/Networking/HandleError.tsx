@@ -1,5 +1,5 @@
 import { ERROR_NETWORK_CODE, ERROR_NOT_FOUND } from '@/Networking/ApiCode'
-import { ResponseBase } from '@/Networking/type'
+import { ResponseBase } from '@/Networking/Type'
 import { translate } from '@/Translations'
 
 const handleData = (responseError: ResponseBase<null>) => {
