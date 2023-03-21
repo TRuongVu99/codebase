@@ -33,7 +33,7 @@ export const CustomImage = ({
 
 export const LocalImage = ({
   style: styleOverride = {},
-  localSource = Images.defaultImage,
+  source: localSource = Images.defaultImage,
   resizeMode = 'cover',
   containerStyle,
   cachePolicy = 'disk',
@@ -44,7 +44,7 @@ export const LocalImage = ({
       {...rest}
       contentFit={resizeMode}
       style={[styles.imgLocal, styleOverride]}
-      source={Images[localSource]}
+      source={localSource}
       cachePolicy={cachePolicy}
     />
   )

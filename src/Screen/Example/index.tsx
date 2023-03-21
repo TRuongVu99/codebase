@@ -60,7 +60,7 @@ const ExampleContainer = () => {
       <CustomImage
         containerStyle={{ width: 100, height: 100, borderRadius: 20 }}
         style={{ borderRadius: 20 }}
-        source=""
+        source="https://media.wired.co.uk/photos/6297a5d79c54054914418514/4:3/w_2120,h_1590,c_limit/Offices-Luring-Workers-Back-With-Plants-Business-1278321240.jpg"
       />
       <TabView
         data={TABVIEW}

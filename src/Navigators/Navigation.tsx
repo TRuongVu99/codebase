@@ -1,6 +1,6 @@
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
-import React, { useEffect } from 'react'
-import { StatusBar, StyleSheet } from 'react-native'
+import React, { useEffect, useRef, useState } from 'react'
+import { StatusBar, StyleSheet, View } from 'react-native'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 // Code Push
 import CodePush from 'react-native-code-push'
@@ -23,12 +23,40 @@ import AppMode from '@/Components/AppMode'
 import { AppLoader } from '@/Components/Loader'
 import { MessageDialog } from '@/Components/MessageDialog'
 import ToastMessage from '@/Components/ToastMessage'
+import RNBootSplash from 'react-native-bootsplash'
+import Animated, {
+  FadeIn,
+  FadeInDown,
+  FadeInUp,
+  FadeOut,
+  useAnimatedStyle,
+  useSharedValue,
+  withDelay,
+  withSpring,
+  withTiming,
+  ZoomIn,
+  ZoomInDown,
+  ZoomInRotate,
+} from 'react-native-reanimated'
+import { CustomImage, LocalImage } from '@/Components/Image'
+import Images from '@/Theme/Images'
+import { Colors } from '@/Theme/Variables'
+import { kWidth } from '@/Common/Constants'
+import { Layout } from '@/Theme'
+import Splash from '@/Components/Splash'
 
 const ApplicationNavigator = () => {
   const dispatch = useAppDispatch()
   const { darkMode, NavigationTheme } = useTheme()
   const { env } = useAppSelector(state => state.app)
   const { appLoadingComplete } = useAppInit()
+
+  useEffect(() => {
+    // delay to ensure animation is loaded (see https://github.com/react-native-community/lottie-react-native/issues/274)
+    setTimeout(() => {
+      RNBootSplash.hide({ fade: false }) // hide the bootsplash immediately, without any fade
+    }, 500)
+  }, [])
 
   useEffect(() => {
     if (appLoadingComplete) {
@@ -53,6 +81,7 @@ const ApplicationNavigator = () => {
 
   return (
     <GestureHandlerRootView style={styles.rootView}>
+      <Splash appLoadingComplete={appLoadingComplete} />
       <BottomSheetModalProvider>
         <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
           <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
@@ -74,6 +103,7 @@ const styles = StyleSheet.create({
   rootView: {
     alignSelf: 'stretch',
     flex: 1,
+    backgroundColor: 'red',
   },
 })
 

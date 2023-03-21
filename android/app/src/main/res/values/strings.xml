@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PlantCare</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">pqLav-DRi09JToaVLG1QdQeW4kPpIEVcOWju3</string>
 </resources>
