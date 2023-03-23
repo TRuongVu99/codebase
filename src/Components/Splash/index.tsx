@@ -16,7 +16,7 @@ import { Images, Layout } from '@/Theme'
 // Constants
 import { kWidth } from '@/Common/Constants'
 import { Colors } from '@/Theme/Variables'
-import { isIos } from '@/Common/Device'
+import { getNavbarHeight, isIos } from '@/Common/Device'
 
 interface ISplash {
   appLoadingComplete: boolean
@@ -65,7 +65,7 @@ const Splash = ({ appLoadingComplete }: ISplash) => {
             StyleSheet.absoluteFill,
             Layout.center,
             {
-              top: !isIos ? 46 : 0,
+              paddingTop: !isIos ? getNavbarHeight() : 0,
               backgroundColor: Colors.white,
               zIndex: 999,
             },

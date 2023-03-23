@@ -1,4 +1,6 @@
-import { Platform, PixelRatio, StatusBar } from 'react-native'
+import { Platform, PixelRatio, StatusBar, Dimensions } from 'react-native'
+import { initialWindowMetrics } from 'react-native-safe-area-context'
+
 import { kHeight, kWidth } from 'Common/Constants'
 import ReactNativeHapticFeedback, {
   HapticFeedbackTypes,
@@ -101,4 +103,8 @@ export function getStatusBarHeight(safe: any) {
 
 export function getBottomSpace() {
   return hasNotch() ? 34 : 0
+}
+
+export const getNavbarHeight = (): number => {
+  return Dimensions.get('screen').height - kHeight
 }
