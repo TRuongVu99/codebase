@@ -43,7 +43,7 @@ const Splash = ({ appLoadingComplete }: ISplash) => {
   useEffect(() => {
     if (appLoadingComplete) {
       rotate.value = withDelay(500, withSpring('360deg', SPRING_CONFIG))
-      translateY.value = withDelay(1800, withTiming(-60))
+      translateY.value = withDelay(1800, withTiming(-85))
       setTimeout(() => {
         setLogoTextIsVisible(true)
       }, 2250)
@@ -52,7 +52,7 @@ const Splash = ({ appLoadingComplete }: ISplash) => {
       }, 2600)
       setTimeout(() => {
         setAnimationIsVisible(false)
-      }, 3200)
+      }, 3500)
     }
   }, [appLoadingComplete])
 
