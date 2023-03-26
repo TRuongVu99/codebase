@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { StatusBar, StyleSheet, View } from 'react-native'
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, View } from 'react-native';
 import Animated, {
   FadeInDown,
   FadeOut,
@@ -9,52 +9,52 @@ import Animated, {
   withSpring,
   withTiming,
   ZoomInRotate,
-} from 'react-native-reanimated'
+} from 'react-native-reanimated';
 // Components
-import { LocalImage } from '../Image'
-import { Images, Layout } from '@/Theme'
+import { LocalImage } from '../Image';
+import { Images, Layout } from '@/Theme';
 // Constants
-import { kWidth } from '@/Common/Constants'
-import { Colors } from '@/Theme/Variables'
-import { getNavbarHeight, isIos } from '@/Common/Device'
+import { kWidth } from '@/Common/Constants';
+import { Colors } from '@/Theme/Variables';
+import { getNavbarHeight, isIos } from '@/Common/Device';
 
 interface ISplash {
-  appLoadingComplete: boolean
+  appLoadingComplete: boolean;
 }
 
 const SPRING_CONFIG = {
   mass: 1.5,
-}
+};
 
 const Splash = ({ appLoadingComplete }: ISplash) => {
-  const [animationIsVisible, setAnimationIsVisible] = useState<boolean>(true)
-  const [logoTextIsVisiable, setLogoTextIsVisible] = useState<boolean>(false)
-  const [logoLeafIsVisiable, setLogoLeafIsVisiable] = useState<boolean>(false)
+  const [animationIsVisible, setAnimationIsVisible] = useState<boolean>(true);
+  const [logoTextIsVisiable, setLogoTextIsVisible] = useState<boolean>(false);
+  const [logoLeafIsVisiable, setLogoLeafIsVisiable] = useState<boolean>(false);
 
-  const rotate = useSharedValue('0deg')
-  const translateY = useSharedValue(0)
+  const rotate = useSharedValue('0deg');
+  const translateY = useSharedValue(0);
 
   const logoStyle = useAnimatedStyle(() => {
     return {
       transform: [{ rotate: rotate.value }, { translateY: translateY.value }],
-    }
-  }, [])
+    };
+  }, []);
 
   useEffect(() => {
     if (appLoadingComplete) {
-      rotate.value = withDelay(500, withSpring('360deg', SPRING_CONFIG))
-      translateY.value = withDelay(1800, withTiming(-85))
+      rotate.value = withDelay(500, withSpring('360deg', SPRING_CONFIG));
+      translateY.value = withDelay(1800, withTiming(-70));
       setTimeout(() => {
-        setLogoTextIsVisible(true)
-      }, 2250)
+        setLogoTextIsVisible(true);
+      }, 2250);
       setTimeout(() => {
-        setLogoLeafIsVisiable(true)
-      }, 2600)
+        setLogoLeafIsVisiable(true);
+      }, 2600);
       setTimeout(() => {
-        setAnimationIsVisible(false)
-      }, 3500)
+        setAnimationIsVisible(false);
+      }, 3500);
     }
-  }, [appLoadingComplete])
+  }, [appLoadingComplete]);
 
   return (
     <>
@@ -109,8 +109,8 @@ const Splash = ({ appLoadingComplete }: ISplash) => {
         </Animated.View>
       )}
     </>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -120,6 +120,6 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
   },
-})
+});
 
-export default Splash
+export default Splash;

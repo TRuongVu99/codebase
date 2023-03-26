@@ -1,12 +1,14 @@
-// Parent Stack Names
+// Navigation Stacks
 export enum NavigationStackNames {
-  SplashStack = 'SplashStack',
+  WelcomeStack = 'WelcomeStack',
   AuthStack = 'AuthStack',
+  HomeStack = 'HomeStack',
   MainStack = 'MainStack',
 }
 
-export enum SplashStack {
-  SplashScreen = 'SplashScreen',
+// Stack Screens
+export enum WelcomeStack {
+  WelcomeScreen = 'WelcomeScreen',
 }
 
 export enum AuthStack {
@@ -16,8 +18,13 @@ export enum AuthStack {
   OtpScreen = 'OtpScreen',
 }
 
+export enum HomeStack {
+  HomeScreen = 'HomeScreen',
+}
+
 export enum BottomTab {
-  HomeScreen = 'Home',
+  BottomTab = 'BottomTab',
+  HomeTab = 'HomeTab',
 }
 
 export enum ForgotPassStack {
@@ -26,11 +33,12 @@ export enum ForgotPassStack {
   ResetPassScreen = 'ResetPassScreen',
 }
 
+// Route names
 const routeNames = {
-  HomeTab: BottomTab,
+  BottomTab: BottomTab,
   Stacks: NavigationStackNames,
   AuthStack: AuthStack,
-  SplashStack: SplashStack,
+  WelcomeStack: WelcomeStack,
 }
 
 export default routeNames

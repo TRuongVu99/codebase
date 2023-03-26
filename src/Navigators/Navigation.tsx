@@ -1,17 +1,18 @@
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
-import React, { useEffect, useRef, useState } from 'react'
-import { StatusBar, StyleSheet, View } from 'react-native'
+import React, { useEffect } from 'react'
+import { StatusBar, StyleSheet } from 'react-native'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 // Code Push
 import CodePush from 'react-native-code-push'
 // Keyboard
 import KeyboardManager from 'react-native-keyboard-manager'
 // Navigation
+import { navigationRef } from '@/Navigators/Utils'
 import { NavigationContainer } from '@react-navigation/native'
 import BottomTab from './BottomTab'
-import { navigationRef } from '@/Navigators/Utils'
+import WelcomeStack from '@/Navigators/Stacks/Welcome'
 // RTK
-import { useAppDispatch, useAppSelector } from '@/Common/Hooks/useRTK'
+import { useAppSelector } from '@/Common/Hooks/useRTK'
 import { RXStore } from '@/Store/Utils'
 // Theme
 import { useAppInit, useTheme } from '@/Common/Hooks'
@@ -22,31 +23,11 @@ import { messageDialogHolder } from '@/Common/MessageHolder'
 import AppMode from '@/Components/AppMode'
 import { AppLoader } from '@/Components/Loader'
 import { MessageDialog } from '@/Components/MessageDialog'
+import Splash from '@/Components/Splash'
 import ToastMessage from '@/Components/ToastMessage'
 import RNBootSplash from 'react-native-bootsplash'
-import Animated, {
-  FadeIn,
-  FadeInDown,
-  FadeInUp,
-  FadeOut,
-  useAnimatedStyle,
-  useSharedValue,
-  withDelay,
-  withSpring,
-  withTiming,
-  ZoomIn,
-  ZoomInDown,
-  ZoomInRotate,
-} from 'react-native-reanimated'
-import { CustomImage, LocalImage } from '@/Components/Image'
-import Images from '@/Theme/Images'
-import { Colors } from '@/Theme/Variables'
-import { kWidth } from '@/Common/Constants'
-import { Layout } from '@/Theme'
-import Splash from '@/Components/Splash'
 
 const ApplicationNavigator = () => {
-  const dispatch = useAppDispatch()
   const { darkMode, NavigationTheme } = useTheme()
   const { env } = useAppSelector(state => state.app)
   const { appLoadingComplete } = useAppInit()
@@ -85,7 +66,8 @@ const ApplicationNavigator = () => {
       <BottomSheetModalProvider>
         <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
           <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
-          <BottomTab />
+          {/* <BottomTab /> */}
+          <WelcomeStack />
           <ToastMessage />
           <AppLoader ref={appLoaderHolder} />
           <MessageDialog ref={messageDialogHolder} />

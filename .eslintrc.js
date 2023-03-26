@@ -7,7 +7,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['jest', '@typescript-eslint', 'prettier'],
   rules: {
-    semi: ['error', 'never'],
+    // semi: ['error', 'never'],
     'object-curly-spacing': ['error', 'always'],
     'array-bracket-spacing': ['error', 'never'],
     'react/require-default-props': ['error'],
@@ -27,4 +27,4 @@ module.exports = {
       'babel-module': {},
     },
   },
-}
+};
