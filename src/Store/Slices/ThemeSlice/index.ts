@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit'
-import { ThemePayload, ThemeState } from './Type'
+import { createSlice } from '@reduxjs/toolkit';
+import { ThemePayload, ThemeState } from './Type';
 
 const themeSlice = createSlice({
   name: 'theme',
@@ -10,10 +10,10 @@ const themeSlice = createSlice({
       { payload: { theme, darkMode } }: ThemePayload,
     ) => {
       if (typeof theme !== 'undefined') {
-        state.theme = theme
+        state.theme = theme;
       }
       if (typeof darkMode !== 'undefined') {
-        state.darkMode = darkMode
+        state.darkMode = darkMode;
       }
     },
     setDefaultTheme: (
@@ -22,14 +22,14 @@ const themeSlice = createSlice({
     ) => {
       if (!state.theme) {
         if (typeof theme !== 'undefined') {
-          state.theme = theme
+          state.theme = theme;
         }
         if (typeof darkMode !== 'undefined') {
-          state.darkMode = darkMode
+          state.darkMode = darkMode;
         }
       }
     },
   },
-})
+});
 
-export const { reducer: themeReducer, actions: themeActions } = themeSlice
+export const { reducer: themeReducer, actions: themeActions } = themeSlice;
