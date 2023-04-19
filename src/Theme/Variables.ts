@@ -17,32 +17,25 @@ export const Colors = {
   green2: '#76bb71',
   green3: '#ADE792',
   green4: '#558b6e',
+  green5: '#72caaf',
+  green6: '#94e590',
   orange1: '#de887e',
   yellow1: '#F3ECB0',
   blue1: '#344D67',
   white: '#ffffff',
   black: '#000000',
   text: '#212529',
-  primary: '#123B7B',
+  primary: '#72caaf',
   success: '#28a745',
   error: '#dc3545',
-  disable: '#D0D4E0',
-  placeHolder: '#BABDC2',
+  disable: '#e0e0e0',
+  placeHolder: '#f5f5f5',
   transparent: 'rgba(0,0,0,0)',
   inputBackground: '#FFFFFF',
 };
 
 export const NavigationColors = {
   primary: Colors.primary,
-};
-
-/**
- * FontSize
- */
-export const FontSize = {
-  small: sizeScale(12),
-  regular: sizeScale(14),
-  large: sizeScale(18),
 };
 
 /**
@@ -62,6 +55,5 @@ export const MetricsSizes = {
 export default {
   Colors,
   NavigationColors,
-  FontSize,
   MetricsSizes,
 };

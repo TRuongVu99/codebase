@@ -1,14 +1,14 @@
-import Config from 'react-native-config'
+import Config from 'react-native-config';
 
-export type EnvKeyName = 'Dev' | 'Staging' | 'Prod'
+export type EnvKeyName = 'Dev' | 'Staging' | 'Prod';
 export interface ENVFields {
-  API_URL: string
-  APP_ENV: EnvKeyName
-  CODE_PUSH_KEY_ANDROID: string
-  CODE_PUSH_KEY_IOS: string
+  API_URL: string;
+  APP_ENV: EnvKeyName;
+  CODE_PUSH_KEY_ANDROID: string;
+  CODE_PUSH_KEY_IOS: string;
 }
 
-export const initEnv = Config.APP_ENV as EnvKeyName
+export const initEnv = Config.APP_ENV as EnvKeyName;
 
 const EnvConfig: Record<EnvKeyName, ENVFields> = {
   Dev: {
@@ -29,10 +29,10 @@ const EnvConfig: Record<EnvKeyName, ENVFields> = {
     CODE_PUSH_KEY_ANDROID: 'an3tYVXXj09Xv531ubRtbjeJldoWJEPkq9KWY',
     CODE_PUSH_KEY_IOS: 'F_D52pIoaOfxjkFc14GeP1vh5-Je51Ge8sXJ4',
   },
-}
+};
 
 export const ENVDynamic = (env: EnvKeyName): ENVFields => {
-  return EnvConfig[env]
-}
+  return EnvConfig[env];
+};
 
-export default EnvConfig[initEnv || 'Dev']
+export default EnvConfig[initEnv || 'Dev'];

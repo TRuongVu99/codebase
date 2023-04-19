@@ -10,13 +10,13 @@ import {
   themes,
   DefaultVariables,
 } from '@/Theme';
+import { ThemeState } from '@/Store/Slices';
 import {
   ThemeVariables,
   Theme,
   ThemeNavigationTheme,
   ThemeNavigationColors,
 } from '@/Theme/theme';
-import { ThemeState } from '@/Store/Slices';
 
 export default function () {
   // Get the scheme device
@@ -57,7 +57,7 @@ export default function () {
 
   const themeVariables = mergeVariables(variables, darkVariables);
 
-  const fonts = Fonts(themeVariables);
+  const fonts = Fonts;
   const gutters = Gutters(themeVariables);
   const images = Images;
   const layout = Layout;
@@ -65,7 +65,7 @@ export default function () {
     ...themeVariables,
     Layout: Layout,
     Gutters: Gutters(themeVariables),
-    Fonts: Fonts(themeVariables),
+    Fonts: Fonts,
     Images: Images,
   });
 

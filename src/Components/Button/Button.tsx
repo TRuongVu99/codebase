@@ -1,11 +1,12 @@
-import React from 'react'
-import { StyleSheet, TouchableOpacity } from 'react-native'
-import Icon from 'react-native-vector-icons/MaterialIcons'
-import { useTheme } from '@/Common/Hooks'
-import { sizeScale } from '@/Common/Scale'
-import { Colors } from '@/Theme/Variables'
-import { BoldText, MediumText, RegularText } from '../Text'
-import { ButtonProps } from './Type'
+import React from 'react';
+import { StyleSheet, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import { useTheme } from '@/Common/Hooks';
+import { sizeScale } from '@/Common/Scale';
+import { Colors } from '@/Theme/Variables';
+import { BoldText, MediumText, RegularText } from '../Text';
+import { ButtonProps } from './Type';
+import ExtralBoldText from '../Text/ExtralBoldText';
 
 export const Button = (props: ButtonProps) => {
   const {
@@ -18,9 +19,11 @@ export const Button = (props: ButtonProps) => {
     iconRight,
     onPress,
     textType = 'medium',
-  } = props
+    textStyle,
+    outlineColor,
+  } = props;
 
-  const { Layout } = useTheme()
+  const { Layout } = useTheme();
 
   return (
     <TouchableOpacity
@@ -37,8 +40,8 @@ export const Button = (props: ButtonProps) => {
             : Colors.primary,
           alignSelf: 'center',
           width: fullSize ? '100%' : 'auto',
-          borderWidth: outline ? 1 : 0,
-          borderColor: Colors.primary,
+          borderWidth: outline ? 2 : 0,
+          borderColor: outlineColor || Colors.primary,
           borderRadius: 8,
         },
         style,
@@ -55,7 +58,8 @@ export const Button = (props: ButtonProps) => {
         <MediumText
           style={[
             styles.text,
-            { color: outline ? Colors.primary : Colors.white },
+            { color: outline ? outlineColor || Colors.primary : Colors.white },
+            textStyle,
           ]}
         >
           {title}
@@ -64,16 +68,28 @@ export const Button = (props: ButtonProps) => {
         <BoldText
           style={[
             styles.text,
-            { color: outline ? Colors.primary : Colors.white },
+            { color: outline ? outlineColor || Colors.primary : Colors.white },
+            textStyle,
           ]}
         >
           {title}
         </BoldText>
+      ) : textType === 'extral-bold' ? (
+        <ExtralBoldText
+          style={[
+            styles.text,
+            { color: outline ? outlineColor || Colors.primary : Colors.white },
+            textStyle,
+          ]}
+        >
+          {title}
+        </ExtralBoldText>
       ) : (
         <RegularText
           style={[
             styles.text,
             { color: outline ? Colors.primary : Colors.white },
+            textStyle,
           ]}
         >
           {title}
@@ -88,8 +104,8 @@ export const Button = (props: ButtonProps) => {
         />
       )}
     </TouchableOpacity>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -101,4 +117,4 @@ const styles = StyleSheet.create({
   text: {
     marginHorizontal: sizeScale(3),
   },
-})
+});

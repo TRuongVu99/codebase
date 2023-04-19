@@ -35,10 +35,10 @@ export enum ForgotPassStack {
 
 // Route names
 const routeNames = {
-  BottomTab: BottomTab,
   Stacks: NavigationStackNames,
+  BottomTab: BottomTab,
   AuthStack: AuthStack,
   WelcomeStack: WelcomeStack,
-}
+};
 
-export default routeNames
+export default routeNames;

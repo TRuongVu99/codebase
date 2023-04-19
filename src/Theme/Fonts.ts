@@ -1,49 +1,29 @@
 /**
  * This file contains all application's style relative to fonts
  */
-import { StyleSheet } from 'react-native'
-import { ThemeVariables } from './theme'
+import { StyleSheet } from 'react-native';
+import { sizeScale } from '@/Common/Scale';
 
-export default function ({ FontSize, Colors }: ThemeVariables) {
-  return StyleSheet.create({
-    textSmall: {
-      fontSize: FontSize.small,
-      color: Colors.text,
-    },
-    textRegular: {
-      fontSize: FontSize.regular,
-      color: Colors.text,
-    },
-    textLarge: {
-      fontSize: FontSize.large,
-      color: Colors.text,
-    },
-    titleSmall: {
-      fontSize: FontSize.small * 2,
-      fontWeight: 'bold',
-      color: Colors.text,
-    },
-    titleRegular: {
-      fontSize: FontSize.regular * 2,
-      fontWeight: 'bold',
-      color: Colors.text,
-    },
-    titleLarge: {
-      fontSize: FontSize.large * 2,
-      fontWeight: 'bold',
-      color: Colors.text,
-    },
-    textCenter: {
-      textAlign: 'center',
-    },
-    textJustify: {
-      textAlign: 'justify',
-    },
-    textLeft: {
-      textAlign: 'left',
-    },
-    textRight: {
-      textAlign: 'right',
-    },
-  })
-}
+export default StyleSheet.create({
+  h1: {
+    fontSize: sizeScale(26),
+    lineHeight: 26 * 1.34,
+  },
+  h2: { fontSize: sizeScale(22), lineHeight: sizeScale(22) * 1.34 },
+  h3: { fontSize: sizeScale(18), lineHeight: sizeScale(18) * 1.34 },
+  h4: { fontSize: sizeScale(16), lineHeight: sizeScale(16) * 1.34 },
+  h5: { fontSize: sizeScale(14), lineHeight: sizeScale(14) * 1.34 },
+  h6: { fontSize: sizeScale(12), lineHeight: sizeScale(12) * 1.34 },
+  textCenter: {
+    textAlign: 'center',
+  },
+  textJustify: {
+    textAlign: 'justify',
+  },
+  textLeft: {
+    textAlign: 'left',
+  },
+  textRight: {
+    textAlign: 'right',
+  },
+});

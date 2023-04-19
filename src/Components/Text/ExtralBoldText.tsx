@@ -1,8 +1,8 @@
-import React from 'react'
-import { StyleSheet, Text } from 'react-native'
-import { CustomTextProps } from './Type'
-import { sizeScale } from '@/Common/Scale'
-import { kFontFamily } from '@/Common/Constants'
+import React from 'react';
+import { StyleSheet, Text } from 'react-native';
+import { CustomTextProps } from './Type';
+import { sizeScale } from '@/Common/Scale';
+import { kFontFamily } from '@/Common/Constants';
 
 const ExtralBoldText = (props: CustomTextProps) => {
   return (
@@ -13,15 +13,15 @@ const ExtralBoldText = (props: CustomTextProps) => {
     >
       {props.children}
     </Text>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   text: {
     fontSize: sizeScale(14),
-    fontWeight: 'bold',
-    fontFamily: kFontFamily.EXTRALBOLD,
+    fontWeight: '900',
+    fontFamily: kFontFamily.EXTRA_BOLD,
   },
-})
+});
 
-export default ExtralBoldText
+export default ExtralBoldText;

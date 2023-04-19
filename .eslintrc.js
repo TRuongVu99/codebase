@@ -21,6 +21,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'off',
     'no-undef': 'off',
     'prettier/prettier': 0,
+    'react-native/no-unused-styles': 2,
   },
   settings: {
     'import/resolver': {

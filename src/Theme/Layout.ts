@@ -1,5 +1,4 @@
-import { StyleSheet } from 'react-native'
-import { ThemeVariables } from './theme'
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   /* Column Layouts */
@@ -121,4 +120,4 @@ export default StyleSheet.create({
     shadowRadius: 10,
     elevation: 3,
   },
-})
+});

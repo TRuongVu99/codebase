@@ -1,12 +1,12 @@
-import React from 'react'
-import { StyleSheet, TouchableOpacity } from 'react-native'
-import LinearGradient from 'react-native-linear-gradient'
-import { sizeScale } from '@/Common/Scale'
-import { BoldText, MediumText, RegularText } from '../Text'
-import { GradientButtonProps } from './Type'
-import { Colors } from '@/Theme/Variables'
-import Icon from 'react-native-vector-icons/MaterialIcons'
-import { useTheme } from '@/Common/Hooks'
+import React from 'react';
+import { StyleSheet, TouchableOpacity } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+import { sizeScale } from '@/Common/Scale';
+import { BoldText, MediumText, RegularText } from '../Text';
+import { GradientButtonProps } from './Type';
+import { Colors } from '@/Theme/Variables';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import { useTheme } from '@/Common/Hooks';
 
 export const GradientButton = (props: GradientButtonProps) => {
   const {
@@ -19,9 +19,10 @@ export const GradientButton = (props: GradientButtonProps) => {
     colors,
     onPress,
     textType = 'medium',
-  } = props
+    textStyle,
+  } = props;
 
-  const { Layout } = useTheme()
+  const { Layout } = useTheme();
 
   return (
     <TouchableOpacity
@@ -58,11 +59,11 @@ export const GradientButton = (props: GradientButtonProps) => {
           />
         )}
         {textType === 'medium' ? (
-          <MediumText style={[styles.text]}>{title}</MediumText>
+          <MediumText style={[styles.text, textStyle]}>{title}</MediumText>
         ) : textType === 'bold' ? (
-          <BoldText style={[styles.text]}>{title}</BoldText>
+          <BoldText style={[styles.text, textStyle]}>{title}</BoldText>
         ) : (
-          <RegularText style={[styles.text]}>{title}</RegularText>
+          <RegularText style={[styles.text, textStyle]}>{title}</RegularText>
         )}
         {iconRight && (
           <Icon
@@ -73,8 +74,8 @@ export const GradientButton = (props: GradientButtonProps) => {
         )}
       </LinearGradient>
     </TouchableOpacity>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -86,4 +87,4 @@ const styles = StyleSheet.create({
     marginHorizontal: sizeScale(3),
     color: Colors.white,
   },
-})
+});
