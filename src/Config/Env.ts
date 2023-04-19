@@ -1,4 +1,4 @@
-import Config from 'react-native-config';
+// import Config from 'react-native-config';
 
 export type EnvKeyName = 'Dev' | 'Staging' | 'Prod';
 export interface ENVFields {
@@ -8,7 +8,7 @@ export interface ENVFields {
   CODE_PUSH_KEY_IOS: string;
 }
 
-export const initEnv = Config.APP_ENV as EnvKeyName;
+export const initEnv = 'Dev';
 
 const EnvConfig: Record<EnvKeyName, ENVFields> = {
   Dev: {

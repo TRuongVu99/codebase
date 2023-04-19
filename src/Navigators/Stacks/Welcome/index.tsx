@@ -4,7 +4,7 @@ import {
   createNativeStackNavigator,
   NativeStackNavigationProp,
 } from '@react-navigation/native-stack';
-import WelcomeScreen from '@/Screen/Welcome';
+import WelcomeScreen from '@/Screens/Welcome';
 import routeNames from '@/Navigators/RouteName';
 
 export type SplashStackParamList = {

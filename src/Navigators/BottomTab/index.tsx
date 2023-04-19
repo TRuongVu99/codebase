@@ -1,9 +1,9 @@
-import React from 'react'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import ExampleContainer from '@/Screen/Example'
-import CustomTabBar from './CustomBottomTab'
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import ExampleContainer from '@/Screens/Example';
+import CustomTabBar from './CustomBottomTab';
 
-const Tab = createBottomTabNavigator()
+const Tab = createBottomTabNavigator();
 
 // @refresh reset
 const BottomNavigator = () => {
@@ -21,7 +21,7 @@ const BottomNavigator = () => {
     >
       <Tab.Screen name="Home" component={ExampleContainer} />
     </Tab.Navigator>
-  )
-}
+  );
+};
 
-export default BottomNavigator
+export default BottomNavigator;

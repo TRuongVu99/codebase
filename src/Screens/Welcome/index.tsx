@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Swiper from 'react-native-web-swiper';
+import { StyleSheet, View } from 'react-native';
 // Constants
 import { kHeight, kWidth } from '@/Common/Constants';
 import { Images, Layout } from '@/Theme';
 // Components
-import { LocalImage } from '@/Components/Image';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { Colors } from '@/Theme/Variables';
-import SvgWave from '@/Components/SvgWave';
-import { IWelcomeItem, WelcomeItem } from './components/WelcomeItem';
-import { Button } from '@/Components/Button';
 import { sizeScale } from '@/Common/Scale';
-import Animated, { Layout as LayoutAnimated } from 'react-native-reanimated';
+import { Button } from '@/Components/Button';
+import SvgWave from '@/Components/SvgWave';
+import { Colors } from '@/Theme/Variables';
+import { IWelcomeItem, WelcomeItem } from './components/WelcomeItem';
 
 const data: IWelcomeItem[] = [
   {
