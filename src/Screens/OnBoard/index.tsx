@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
+// Animation
+import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 // Constants
 import { kHeight, kWidth } from '@/Common/Constants';
 import { Images, Layout } from '@/Theme';
@@ -9,6 +11,14 @@ import { Button } from '@/Components/Button';
 import SvgWave from '@/Components/SvgWave';
 import { Colors } from '@/Theme/Variables';
 import { IWelcomeItem, WelcomeItem } from './components/WelcomeItem';
+// navigation
+import { CommonActions, NavigationProp } from '@react-navigation/native';
+import { AuthStackParamList } from '@/Navigators/Stacks/AuthStack';
+import routeNames from '@/Navigators/RouteName';
+
+interface IProps {
+  navigation: NavigationProp<AuthStackParamList>;
+}
 
 const data: IWelcomeItem[] = [
   {
@@ -36,14 +46,27 @@ const data: IWelcomeItem[] = [
   },
 ];
 
-const IntroScreen = () => {
+const OnBoardScreen = ({ navigation }: IProps) => {
   const [activeIndex, setActiveindex] = useState<number>(0);
 
-  const onChangeActive = () => {
-    if (activeIndex === 3) {
-      return setActiveindex(0);
+  const onChangeActive = (type: string) => {
+    if (type === 'done') {
+      return navigation.dispatch(
+        CommonActions.reset({
+          index: 0,
+          routes: [
+            {
+              name: routeNames.AuthStack.LoginScreen,
+            },
+          ],
+        }),
+      );
     }
-    setActiveindex(prev => prev + 1);
+    if (type === 'next') {
+      setActiveindex(prev => prev + 1);
+    } else {
+      setActiveindex(prev => prev - 1);
+    }
   };
   return (
     <View style={[Layout.fill, { backgroundColor: Colors.green5 }]}>
@@ -83,15 +106,33 @@ const IntroScreen = () => {
           />
         )}
       </View>
-      <Button
-        title="Next"
-        outline
-        outlineColor={Colors.white}
-        textType="bold"
-        style={styles.button}
-        textStyle={styles.buttonText}
-        onPress={onChangeActive}
-      />
+      <View style={[Layout.rowBetween]}>
+        {activeIndex !== 0 && (
+          <Animated.View entering={FadeIn} exiting={FadeOut}>
+            <Button
+              title={'Back'}
+              outline
+              outlineColor={Colors.white}
+              textType="bold"
+              style={[styles.button, { left: sizeScale(16) }]}
+              textStyle={styles.buttonText}
+              onPress={() => onChangeActive('back')}
+            />
+          </Animated.View>
+        )}
+
+        <Button
+          title={activeIndex === data.length - 1 ? 'Done' : 'Next'}
+          outline
+          outlineColor={Colors.white}
+          textType="bold"
+          style={[styles.button, { right: sizeScale(16) }]}
+          textStyle={styles.buttonText}
+          onPress={() =>
+            onChangeActive(activeIndex === data.length - 1 ? 'done' : 'next')
+          }
+        />
+      </View>
     </View>
   );
 };
@@ -113,4 +154,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default IntroScreen;
+export default OnBoardScreen;

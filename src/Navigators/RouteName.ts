@@ -12,9 +12,11 @@ export enum WelcomeStack {
 }
 
 export enum AuthStack {
-  SignInScreen = 'SignInScreen',
+  OnBoardScreen = 'OnBoardScreen',
+  WelcomeScreen = 'WelcomeScreen',
+  LoginScreen = 'LoginScreen',
   SignUpScreen = 'SignUpScreen',
-  ForgotPassStack = 'ForgotPassStack',
+  ForgotPasswordScreen = 'ForgotPasswordScreen',
   OtpScreen = 'OtpScreen',
 }
 
@@ -28,7 +30,7 @@ export enum BottomTab {
 }
 
 export enum ForgotPassStack {
-  ForgotPassScreen = 'ForgotPassScreen',
+  ForgotPasswordScreen = 'ForgotPasswordScreen',
   OtpScreen = 'OtpScreen',
   ResetPassScreen = 'ResetPassScreen',
 }

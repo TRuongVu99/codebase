@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* PlantCareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PlantCareTests.m */; };
+		00E356F31AD99517003FC87E /* CodeBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CodeBaseTests.m */; };
 		06036DEB44BC413382A1E1AE /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABEDCD08E51D4395AEF510A0 /* Nunito-Light.ttf */; };
-		0C80B921A6F3F58F76C31292 /* libPods-PlantCare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-PlantCare.a */; };
+		0C80B921A6F3F58F76C31292 /* libPods-CodeBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-CodeBase.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -20,7 +20,7 @@
 		663F0A99F68D438EA86081FE /* Nunito-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD507AD1161C43E68B4EB0A3 /* Nunito-SemiBoldItalic.ttf */; };
 		6D62E32F0F5F4F6E9479DA1D /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05A839375DC74F29818326BF /* Nunito-ExtraBoldItalic.ttf */; };
 		72EA03120C464E058A535294 /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B09A026265294C60904A1134 /* Nunito-Italic.ttf */; };
-		7699B88040F8A987B510C191 /* libPods-PlantCare-PlantCareTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-PlantCare-PlantCareTests.a */; };
+		7699B88040F8A987B510C191 /* libPods-CodeBase-CodeBaseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-CodeBase-CodeBaseTests.a */; };
 		77C131E8D3B248779E370808 /* Nunito-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 551497B664A34C93B501A458 /* Nunito-BlackItalic.ttf */; };
 		7897300F1B0C4F0C907F5896 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 872D5E20B1434800852B1CA0 /* Nunito-SemiBold.ttf */; };
 		7F50FE834A4D479E946BF986 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCAE6C6BDC8445B59C5F69A7 /* Nunito-Bold.ttf */; };
@@ -41,46 +41,46 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = PlantCare;
+			remoteInfo = "CodeBase";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* PlantCareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantCareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* CodeBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CodeBaseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* PlantCareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlantCareTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* CodeBaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CodeBaseTests.m"; sourceTree = "<group>"; };
 		05A839375DC74F29818326BF /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraBoldItalic.ttf"; path = "../src/Assets/Fonts/Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* PlantCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PlantCare/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = PlantCare/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PlantCare/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = PlantCare/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = PlantCare/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-PlantCare-PlantCareTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlantCare-PlantCareTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* CodeBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CodeBase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "CodeBase/AppDelegate.h"; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = "CodeBase/AppDelegate.mm"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "CodeBase/Images.xcassets"; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "CodeBase/Info.plist"; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "CodeBase/main.m"; sourceTree = "<group>"; };
+		19F6CBCC0A4E27FBF8BF4A61 /* libPods-CodeBase-CodeBaseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeBase-CodeBaseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E318D2C993A4FC891990DC9 /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-LightItalic.ttf"; path = "../src/Assets/Fonts/Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
 		2445267E8DBD4C1799433CF5 /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-BoldItalic.ttf"; path = "../src/Assets/Fonts/Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-PlantCare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantCare.debug.xcconfig"; path = "Target Support Files/Pods-PlantCare/Pods-PlantCare.debug.xcconfig"; sourceTree = "<group>"; };
+		3B4392A12AC88292D35C810B /* Pods-CodeBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBase.debug.xcconfig"; path = "Target Support Files/Pods-CodeBase/Pods-CodeBase.debug.xcconfig"; sourceTree = "<group>"; };
 		3CB0D538BC634E9D8DAAB38E /* Nunito-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraLightItalic.ttf"; path = "../src/Assets/Fonts/Nunito-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		49B8C1470B994B79B2D25BE0 /* Nunito-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Black.ttf"; path = "../src/Assets/Fonts/Nunito-Black.ttf"; sourceTree = "<group>"; };
 		4E0226D72D4640A8AE199C60 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Regular.ttf"; path = "../src/Assets/Fonts/Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		551497B664A34C93B501A458 /* Nunito-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-BlackItalic.ttf"; path = "../src/Assets/Fonts/Nunito-BlackItalic.ttf"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-PlantCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantCare.release.xcconfig"; path = "Target Support Files/Pods-PlantCare/Pods-PlantCare.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-PlantCare-PlantCareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantCare-PlantCareTests.debug.xcconfig"; path = "Target Support Files/Pods-PlantCare-PlantCareTests/Pods-PlantCare-PlantCareTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-PlantCare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlantCare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5709B34CF0A7D63546082F79 /* Pods-CodeBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBase.release.xcconfig"; path = "Target Support Files/Pods-CodeBase/Pods-CodeBase.release.xcconfig"; sourceTree = "<group>"; };
+		5B7EB9410499542E8C5724F5 /* Pods-CodeBase-CodeBaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBase-CodeBaseTests.debug.xcconfig"; path = "Target Support Files/Pods-CodeBase-CodeBaseTests/Pods-CodeBase-CodeBaseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DCACB8F33CDC322A6C60F78 /* libPods-CodeBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		872D5E20B1434800852B1CA0 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-SemiBold.ttf"; path = "../src/Assets/Fonts/Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-PlantCare-PlantCareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantCare-PlantCareTests.release.xcconfig"; path = "Target Support Files/Pods-PlantCare-PlantCareTests/Pods-PlantCare-PlantCareTests.release.xcconfig"; sourceTree = "<group>"; };
+		89C6BE57DB24E9ADA2F236DE /* Pods-CodeBase-CodeBaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBase-CodeBaseTests.release.xcconfig"; path = "Target Support Files/Pods-CodeBase-CodeBaseTests/Pods-CodeBase-CodeBaseTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C829387DB504594B9413417 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Medium.ttf"; path = "../src/Assets/Fonts/Nunito-Medium.ttf"; sourceTree = "<group>"; };
-		A85DC35C29C207A800E60413 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = PlantCare/BootSplash.storyboard; sourceTree = "<group>"; };
-		A891C00929AA0C6200E41C6A /* PlantCare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlantCare-Bridging-Header.h"; sourceTree = "<group>"; };
+		A85DC35C29C207A800E60413 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = CodeBase/BootSplash.storyboard; sourceTree = "<group>"; };
+		A891C00929AA0C6200E41C6A /* CodeBase-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodeBase-Bridging-Header.h"; sourceTree = "<group>"; };
 		A891C00A29AA0C6200E41C6A /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		ABEDCD08E51D4395AEF510A0 /* Nunito-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Light.ttf"; path = "../src/Assets/Fonts/Nunito-Light.ttf"; sourceTree = "<group>"; };
 		B09A026265294C60904A1134 /* Nunito-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Italic.ttf"; path = "../src/Assets/Fonts/Nunito-Italic.ttf"; sourceTree = "<group>"; };
 		BA137B29027B4CA3BCEC15D2 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraBold.ttf"; path = "../src/Assets/Fonts/Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
 		BD507AD1161C43E68B4EB0A3 /* Nunito-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-SemiBoldItalic.ttf"; path = "../src/Assets/Fonts/Nunito-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		CCAE6C6BDC8445B59C5F69A7 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Bold.ttf"; path = "../src/Assets/Fonts/Nunito-Bold.ttf"; sourceTree = "<group>"; };
-		D37BA2850F65BC69695C9211 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-PlantCare-PlantCareTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		D37BA2850F65BC69695C9211 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-CodeBase-CodeBaseTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		E2D54B4DAF9C40AFBB39C885 /* Nunito-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-MediumItalic.ttf"; path = "../src/Assets/Fonts/Nunito-MediumItalic.ttf"; sourceTree = "<group>"; };
-		E9918ED197760A4700FC4062 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-PlantCare/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		E9918ED197760A4700FC4062 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-CodeBase/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		EF9337A154EA4CAF8EF84710 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraLight.ttf"; path = "../src/Assets/Fonts/Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-PlantCare-PlantCareTests.a in Frameworks */,
+				7699B88040F8A987B510C191 /* libPods-CodeBase-CodeBaseTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,20 +98,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-PlantCare.a in Frameworks */,
+				0C80B921A6F3F58F76C31292 /* libPods-CodeBase.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* PlantCareTests */ = {
+		00E356EF1AD99517003FC87E /* CodeBaseTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* PlantCareTests.m */,
+				00E356F21AD99517003FC87E /* CodeBaseTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = PlantCareTests;
+			path = "CodeBaseTests";
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -122,7 +122,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* PlantCare */ = {
+		13B07FAE1A68108700A75B9A /* CodeBase */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -132,35 +132,35 @@
 				A85DC35C29C207A800E60413 /* BootSplash.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				A891C00A29AA0C6200E41C6A /* Bridge.swift */,
-				A891C00929AA0C6200E41C6A /* PlantCare-Bridging-Header.h */,
+				A891C00929AA0C6200E41C6A /* CodeBase-Bridging-Header.h */,
 			);
-			name = PlantCare;
+			name = "CodeBase";
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-PlantCare.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-PlantCare-PlantCareTests.a */,
+				5DCACB8F33CDC322A6C60F78 /* libPods-CodeBase.a */,
+				19F6CBCC0A4E27FBF8BF4A61 /* libPods-CodeBase-CodeBaseTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3BD0BB8AE753F6DB33760D3D /* PlantCareTests */ = {
+		3BD0BB8AE753F6DB33760D3D /* CodeBaseTests */ = {
 			isa = PBXGroup;
 			children = (
 				D37BA2850F65BC69695C9211 /* ExpoModulesProvider.swift */,
 			);
-			name = PlantCareTests;
+			name = "CodeBaseTests";
 			sourceTree = "<group>";
 		};
-		49FDF9EA0573BC03B057A415 /* PlantCare */ = {
+		49FDF9EA0573BC03B057A415 /* CodeBase */ = {
 			isa = PBXGroup;
 			children = (
 				E9918ED197760A4700FC4062 /* ExpoModulesProvider.swift */,
 			);
-			name = PlantCare;
+			name = "CodeBase";
 			sourceTree = "<group>";
 		};
 		56E0A7E6DE8D43F99A7BB2B9 /* Resources */ = {
@@ -189,8 +189,8 @@
 		6CD69A4F195ADB104F197F06 /* ExpoModulesProviders */ = {
 			isa = PBXGroup;
 			children = (
-				49FDF9EA0573BC03B057A415 /* PlantCare */,
-				3BD0BB8AE753F6DB33760D3D /* PlantCareTests */,
+				49FDF9EA0573BC03B057A415 /* CodeBase */,
+				3BD0BB8AE753F6DB33760D3D /* CodeBaseTests */,
 			);
 			name = ExpoModulesProviders;
 			sourceTree = "<group>";
@@ -205,9 +205,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* PlantCare */,
+				13B07FAE1A68108700A75B9A /* CodeBase */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* PlantCareTests */,
+				00E356EF1AD99517003FC87E /* CodeBaseTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -222,8 +222,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* PlantCare.app */,
-				00E356EE1AD99517003FC87E /* PlantCareTests.xctest */,
+				13B07F961A680F5B00A75B9A /* CodeBase.app */,
+				00E356EE1AD99517003FC87E /* CodeBaseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -231,10 +231,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-PlantCare.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-PlantCare.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-PlantCare-PlantCareTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-PlantCare-PlantCareTests.release.xcconfig */,
+				3B4392A12AC88292D35C810B /* Pods-CodeBase.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-CodeBase.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-CodeBase-CodeBaseTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-CodeBase-CodeBaseTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -242,9 +242,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* PlantCareTests */ = {
+		00E356ED1AD99517003FC87E /* CodeBaseTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "PlantCareTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CodeBaseTests" */;
 			buildPhases = (
 				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -258,14 +258,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = PlantCareTests;
-			productName = PlantCareTests;
-			productReference = 00E356EE1AD99517003FC87E /* PlantCareTests.xctest */;
+			name = "CodeBaseTests";
+			productname = "CodeBaseTests";
+			productReference = 00E356EE1AD99517003FC87E /* CodeBaseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* PlantCare */ = {
+		13B07F861A680F5B00A75B9A /* CodeBase */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "PlantCare" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "CodeBase" */;
 			buildPhases = (
 				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -280,9 +280,9 @@
 			);
 			dependencies = (
 			);
-			name = PlantCare;
-			productName = PlantCare;
-			productReference = 13B07F961A680F5B00A75B9A /* PlantCare.app */;
+			name = "CodeBase";
+			productName = "CodeBase";
+			productReference = 13B07F961A680F5B00A75B9A /* CodeBase.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -302,7 +302,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "PlantCare" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "CodeBase" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -315,8 +315,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* PlantCare */,
-				00E356ED1AD99517003FC87E /* PlantCareTests */,
+				13B07F861A680F5B00A75B9A /* CodeBase */,
+				00E356ED1AD99517003FC87E /* CodeBaseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -379,15 +379,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlantCare/Pods-PlantCare-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CodeBase/Pods-CodeBase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlantCare/Pods-PlantCare-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CodeBase/Pods-CodeBase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlantCare/Pods-PlantCare-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodeBase/Pods-CodeBase-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
@@ -405,7 +405,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PlantCare-PlantCareTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CodeBase-CodeBaseTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -427,7 +427,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PlantCare-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CodeBase-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -440,15 +440,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlantCare-PlantCareTests/Pods-PlantCare-PlantCareTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CodeBase-CodeBaseTests/Pods-CodeBase-CodeBaseTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlantCare-PlantCareTests/Pods-PlantCare-PlantCareTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CodeBase-CodeBaseTests/Pods-CodeBase-CodeBaseTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlantCare-PlantCareTests/Pods-PlantCare-PlantCareTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodeBase-CodeBaseTests/Pods-CodeBase-CodeBaseTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
@@ -457,15 +457,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlantCare/Pods-PlantCare-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CodeBase/Pods-CodeBase-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlantCare/Pods-PlantCare-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CodeBase/Pods-CodeBase-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlantCare/Pods-PlantCare-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodeBase/Pods-CodeBase-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
@@ -474,15 +474,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlantCare-PlantCareTests/Pods-PlantCare-PlantCareTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CodeBase-CodeBaseTests/Pods-CodeBase-CodeBaseTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlantCare-PlantCareTests/Pods-PlantCare-PlantCareTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CodeBase-CodeBaseTests/Pods-CodeBase-CodeBaseTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlantCare-PlantCareTests/Pods-PlantCare-PlantCareTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodeBase-CodeBaseTests/Pods-CodeBase-CodeBaseTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -511,7 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* PlantCareTests.m in Sources */,
+				00E356F31AD99517003FC87E /* CodeBaseTests.m in Sources */,
 				5AB3281D23597FDCC9872AD4 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,7 +532,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* PlantCare */;
+			target = 13B07F861A680F5B00A75B9A /* CodeBase */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -540,7 +540,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-PlantCare-PlantCareTests.debug.xcconfig */;
+			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-CodeBase-CodeBaseTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -548,7 +548,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = PlantCareTests/Info.plist;
+				INFOPLIST_FILE = "CodeBaseTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -561,20 +561,20 @@
 					"$(inherited)",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iplantc;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codebase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlantCare.app/PlantCare";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeBase.app/CodeBase";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-PlantCare-PlantCareTests.release.xcconfig */;
+			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-CodeBase-CodeBaseTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = PlantCareTests/Info.plist;
+				INFOPLIST_FILE = "CodeBaseTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -587,22 +587,23 @@
 					"$(inherited)",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iplantc;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codebase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlantCare.app/PlantCare";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeBase.app/CodeBase";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-PlantCare.debug.xcconfig */;
+			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-CodeBase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = PlantCare/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = PlantCare;
+				INFOPLIST_FILE = "CodeBase/Info.plist";
+             INFOPLIST_KEY_CFBundleDisplayName = "CodeBase";
+				INFOPLIST_KEY_CFBundleDisplayName = CodeBase;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,9 +615,9 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iplantc;
-				PRODUCT_NAME = PlantCare;
-				SWIFT_OBJC_BRIDGING_HEADER = "PlantCare-Bridging-Header.h";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codebase";
+				PRODUCT_NAME = "CodeBase";
+				SWIFT_OBJC_BRIDGING_HEADER = "CodeBase-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -625,13 +626,14 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-PlantCare.release.xcconfig */;
+			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-CodeBase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = PlantCare/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = PlantCare;
+				INFOPLIST_FILE = "CodeBase/Info.plist";
+             INFOPLIST_KEY_CFBundleDisplayName = "CodeBase";
+				INFOPLIST_KEY_CFBundleDisplayName = CodeBase;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -643,9 +645,9 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iplantc;
-				PRODUCT_NAME = PlantCare;
-				SWIFT_OBJC_BRIDGING_HEADER = "PlantCare-Bridging-Header.h";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codebase";
+				PRODUCT_NAME = "CodeBase";
+				SWIFT_OBJC_BRIDGING_HEADER = "CodeBase-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -791,7 +793,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "PlantCareTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CodeBaseTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -800,7 +802,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "PlantCare" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "CodeBase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -809,7 +811,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "PlantCare" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "CodeBase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

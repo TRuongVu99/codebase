@@ -1,43 +1,43 @@
-import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
-import React, { useEffect } from 'react'
-import { StatusBar, StyleSheet } from 'react-native'
-import { GestureHandlerRootView } from 'react-native-gesture-handler'
+import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
+import React, { useEffect } from 'react';
+import { StatusBar, StyleSheet } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 // Code Push
-import CodePush from 'react-native-code-push'
+import CodePush from 'react-native-code-push';
 // Keyboard
-import KeyboardManager from 'react-native-keyboard-manager'
+import KeyboardManager from 'react-native-keyboard-manager';
 // Navigation
-import { navigationRef } from '@/Navigators/Utils'
-import { NavigationContainer } from '@react-navigation/native'
-import BottomTab from './BottomTab'
-import WelcomeStack from '@/Navigators/Stacks/Welcome'
+import { navigationRef } from '@/Navigators/Utils';
+import { NavigationContainer } from '@react-navigation/native';
+import BottomTab from './BottomTab';
+import AuthStack from '@/Navigators/Stacks/AuthStack';
 // RTK
-import { useAppSelector } from '@/Common/Hooks/useRTK'
-import { RXStore } from '@/Store/Utils'
+import { useAppSelector } from '@/Common/Hooks/useRTK';
+import { RXStore } from '@/Store/Utils';
 // Theme
-import { useAppInit, useTheme } from '@/Common/Hooks'
+import { useAppInit, useTheme } from '@/Common/Hooks';
 // Components
-import { appLoaderHolder } from '@/Common/AppLoaderHolder'
-import { isIos } from '@/Common/Device'
-import { messageDialogHolder } from '@/Common/MessageHolder'
-import AppMode from '@/Components/AppMode'
-import { AppLoader } from '@/Components/Loader'
-import { MessageDialog } from '@/Components/MessageDialog'
-import Splash from '@/Components/Splash'
-import ToastMessage from '@/Components/ToastMessage'
-import RNBootSplash from 'react-native-bootsplash'
+import { appLoaderHolder } from '@/Common/AppLoaderHolder';
+import { isIos } from '@/Common/Device';
+import { messageDialogHolder } from '@/Common/MessageHolder';
+import AppMode from '@/Components/AppMode';
+import { AppLoader } from '@/Components/Loader';
+import { MessageDialog } from '@/Components/MessageDialog';
+import Splash from '@/Components/Splash';
+import ToastMessage from '@/Components/ToastMessage';
+import RNBootSplash from 'react-native-bootsplash';
 
 const ApplicationNavigator = () => {
-  const { darkMode, NavigationTheme } = useTheme()
-  const { env } = useAppSelector(state => state.app)
-  const { appLoadingComplete } = useAppInit()
+  const { darkMode, NavigationTheme } = useTheme();
+  const { env } = useAppSelector(state => state.app);
+  const { appLoadingComplete } = useAppInit();
 
   useEffect(() => {
     // delay to ensure animation is loaded (see https://github.com/react-native-community/lottie-react-native/issues/274)
     setTimeout(() => {
-      RNBootSplash.hide({ fade: false }) // hide the bootsplash immediately, without any fade
-    }, 500)
-  }, [])
+      RNBootSplash.hide({ fade: false }); // hide the bootsplash immediately, without any fade
+    }, 500);
+  }, []);
 
   useEffect(() => {
     if (appLoadingComplete) {
@@ -46,19 +46,19 @@ const ApplicationNavigator = () => {
           ? env.CODE_PUSH_KEY_IOS
           : env.CODE_PUSH_KEY_ANDROID,
         installMode: CodePush.InstallMode.IMMEDIATE,
-      })
+      });
     }
-  }, [appLoadingComplete])
+  }, [appLoadingComplete]);
 
   useEffect(() => {
     if (isIos) {
       if (darkMode) {
-        KeyboardManager.setKeyboardAppearance('dark')
+        KeyboardManager.setKeyboardAppearance('dark');
       } else {
-        KeyboardManager.setKeyboardAppearance('light')
+        KeyboardManager.setKeyboardAppearance('light');
       }
     }
-  }, [darkMode])
+  }, [darkMode]);
 
   return (
     <GestureHandlerRootView style={styles.rootView}>
@@ -67,7 +67,7 @@ const ApplicationNavigator = () => {
         <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
           <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
           {/* <BottomTab /> */}
-          <WelcomeStack />
+          <AuthStack />
           <ToastMessage />
           <AppLoader ref={appLoaderHolder} />
           <MessageDialog ref={messageDialogHolder} />
@@ -78,8 +78,8 @@ const ApplicationNavigator = () => {
         </NavigationContainer>
       </BottomSheetModalProvider>
     </GestureHandlerRootView>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   rootView: {
@@ -87,6 +87,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'red',
   },
-})
+});
 
-export default ApplicationNavigator
+export default ApplicationNavigator;
