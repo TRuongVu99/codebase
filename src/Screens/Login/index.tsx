@@ -1,13 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 
 interface IProps {}
 
 const SignInScreen = (props: IProps) => {
   return (
-    <View>
+    <SafeAreaView>
       <Text>index</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 

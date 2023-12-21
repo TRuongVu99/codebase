@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "125082193979",
+    "project_id": "templatecodebase",
+    "storage_bucket": "templatecodebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125082193979:android:9e7cee71182ce14da1cc1e",
+        "android_client_info": {
+          "package_name": "com.codebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3mXsj5iwic4zvULYYo8DTjkQpnkR-2iE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
