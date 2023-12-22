@@ -32,6 +32,7 @@ const AuthStack = () => {
       screenOptions={{
         headerShown: false,
       }}
+      initialRouteName={routeNames.AuthStack.OnBoardScreen}
     >
       <Stack.Screen
         name={routeNames.AuthStack.OnBoardScreen}

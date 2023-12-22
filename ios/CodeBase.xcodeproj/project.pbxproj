@@ -12,6 +12,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3EB640C42B34CA8A00F1B4C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EB640C32B34CA8A00F1B4C7 /* GoogleService-Info.plist */; };
 		50AD0190A65B4473AB7B1243 /* Nunito-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2D54B4DAF9C40AFBB39C885 /* Nunito-MediumItalic.ttf */; };
 		52D428402B2C48B71FA71B1D /* libPods-CodeBase-CodeBaseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 149D375DF5D317EF1DE19F42 /* libPods-CodeBase-CodeBaseTests.a */; };
 		53CB72CE49C14064877B5AB6 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF9337A154EA4CAF8EF84710 /* Nunito-ExtraLight.ttf */; };
@@ -60,6 +61,7 @@
 		1E318D2C993A4FC891990DC9 /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-LightItalic.ttf"; path = "../src/Assets/Fonts/Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
 		2445267E8DBD4C1799433CF5 /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-BoldItalic.ttf"; path = "../src/Assets/Fonts/Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
 		3CB0D538BC634E9D8DAAB38E /* Nunito-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraLightItalic.ttf"; path = "../src/Assets/Fonts/Nunito-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		3EB640C32B34CA8A00F1B4C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		478FE57F7AE596A6F2B10726 /* Pods-CodeBase-CodeBaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBase-CodeBaseTests.release.xcconfig"; path = "Target Support Files/Pods-CodeBase-CodeBaseTests/Pods-CodeBase-CodeBaseTests.release.xcconfig"; sourceTree = "<group>"; };
 		49B8C1470B994B79B2D25BE0 /* Nunito-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Black.ttf"; path = "../src/Assets/Fonts/Nunito-Black.ttf"; sourceTree = "<group>"; };
 		4E0226D72D4640A8AE199C60 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Regular.ttf"; path = "../src/Assets/Fonts/Nunito-Regular.ttf"; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				3EB640C32B34CA8A00F1B4C7 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* CodeBase */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* CodeBaseTests */,
@@ -250,7 +253,6 @@
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				9FF57F33257ADAA723BB5EBF /* [CP] Embed Pods Frameworks */,
 				6903D05C136A1554EA6FBF1F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -273,7 +275,6 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				08D0940842C7C7AD47D995A6 /* [CP] Embed Pods Frameworks */,
 				FCE9A6B2DF80F618568C35F6 /* [CP] Copy Pods Resources */,
 				ED256BAD5F9CC4062A4617D4 /* [CP-User] [RNFB] Core Configuration */,
 			);
@@ -292,7 +293,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -345,6 +346,7 @@
 				53CB72CE49C14064877B5AB6 /* Nunito-ExtraLight.ttf in Resources */,
 				60239D616F7D4A14AFCF25FC /* Nunito-ExtraLightItalic.ttf in Resources */,
 				72EA03120C464E058A535294 /* Nunito-Italic.ttf in Resources */,
+				3EB640C42B34CA8A00F1B4C7 /* GoogleService-Info.plist in Resources */,
 				06036DEB44BC413382A1E1AE /* Nunito-Light.ttf in Resources */,
 				8BD746EC07DE4F4CB3C66D47 /* Nunito-LightItalic.ttf in Resources */,
 				ACEF044F1AE44A54A9169106 /* Nunito-Medium.ttf in Resources */,
@@ -396,23 +398,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		08D0940842C7C7AD47D995A6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CodeBase/Pods-CodeBase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CodeBase/Pods-CodeBase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodeBase/Pods-CodeBase-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5ECB2468667DD8CC6C804A3A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -450,23 +435,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodeBase-CodeBaseTests/Pods-CodeBase-CodeBaseTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9FF57F33257ADAA723BB5EBF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CodeBase-CodeBaseTests/Pods-CodeBase-CodeBaseTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CodeBase-CodeBaseTests/Pods-CodeBase-CodeBaseTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodeBase-CodeBaseTests/Pods-CodeBase-CodeBaseTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ED256BAD5F9CC4062A4617D4 /* [CP-User] [RNFB] Core Configuration */ = {
@@ -706,7 +674,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -778,7 +746,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -806,6 +774,7 @@
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

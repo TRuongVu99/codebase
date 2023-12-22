@@ -1,4 +1,3 @@
-import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import React, { useEffect } from 'react';
 import { StatusBar, StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -63,20 +62,18 @@ const ApplicationNavigator = () => {
   return (
     <GestureHandlerRootView style={styles.rootView}>
       <Splash appLoadingComplete={appLoadingComplete} />
-      <BottomSheetModalProvider>
-        <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
-          <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
-          {/* <BottomTab /> */}
-          <AuthStack />
-          <ToastMessage />
-          <AppLoader ref={appLoaderHolder} />
-          <MessageDialog ref={messageDialogHolder} />
-          <RXStore />
-          {appLoadingComplete && env.APP_ENV !== 'Prod' && (
-            <AppMode envMode={env.APP_ENV} />
-          )}
-        </NavigationContainer>
-      </BottomSheetModalProvider>
+      <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
+        <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
+        {/* <BottomTab /> */}
+        <AuthStack />
+        <ToastMessage />
+        <AppLoader ref={appLoaderHolder} />
+        <MessageDialog ref={messageDialogHolder} />
+        <RXStore />
+        {appLoadingComplete && env.APP_ENV !== 'Prod' && (
+          <AppMode envMode={env.APP_ENV} />
+        )}
+      </NavigationContainer>
     </GestureHandlerRootView>
   );
 };

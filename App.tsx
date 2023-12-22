@@ -1,23 +1,32 @@
-import 'react-native-gesture-handler'
-import '@/Translations/i18n'
-import 'react-native-get-random-values'
-import React from 'react'
-import { UIManager } from 'react-native'
-import ErrorBoundary from 'react-native-error-boundary'
-import { Provider } from 'react-redux'
-import { PersistGate } from 'redux-persist/lib/integration/react'
-import { AvoidSoftInput } from 'react-native-avoid-softinput'
-import { store, persistor } from '@/Store'
-import ApplicationNavigator from '@/Navigators/Navigation'
-import { isIos } from '@/Common/Device'
-import CustomFallback from '@/Components/CustomFallback'
+import 'react-native-gesture-handler';
+import '@/Translations/i18n';
+import 'react-native-get-random-values';
+import React from 'react';
+import { UIManager } from 'react-native';
+import ErrorBoundary from 'react-native-error-boundary';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/lib/integration/react';
+import { AvoidSoftInput } from 'react-native-avoid-softinput';
+import { store, persistor } from '@/Store';
+import ApplicationNavigator from '@/Navigators/Navigation';
+import { isIos } from '@/Common/Device';
+import CustomFallback from '@/Components/CustomFallback';
+import KeyboardManager from 'react-native-keyboard-manager';
 
 if (!isIos) {
   if (UIManager.setLayoutAnimationEnabledExperimental) {
-    UIManager.setLayoutAnimationEnabledExperimental(true)
+    UIManager.setLayoutAnimationEnabledExperimental(true);
   }
 } else {
-  AvoidSoftInput.setEnabled(true)
+  KeyboardManager.setEnable(true);
+  KeyboardManager.setEnableDebugging(false);
+  KeyboardManager.setKeyboardDistanceFromTextField(10);
+  KeyboardManager.setEnableAutoToolbar(false);
+  KeyboardManager.setOverrideKeyboardAppearance(true);
+  KeyboardManager.setKeyboardAppearance('default');
+  KeyboardManager.setShouldResignOnTouchOutside(true);
+  KeyboardManager.setShouldPlayInputClicks(true);
+  KeyboardManager.resignFirstResponder();
 }
 
 const App = () => (
@@ -35,6 +44,6 @@ const App = () => (
       </ErrorBoundary>
     </PersistGate>
   </Provider>
-)
+);
 
-export default App
+export default App;

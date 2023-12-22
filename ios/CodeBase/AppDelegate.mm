@@ -1,6 +1,6 @@
 #import "AppDelegate.h"
-#import "RNBootSplash.h"
 #import <Firebase.h>
+#import "RNBootSplash.h"
 #import <React/RCTBundleURLProvider.h>
 
 @implementation AppDelegate
